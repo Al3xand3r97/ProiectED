@@ -1,3 +1,2 @@
 # ProiectED
-Proiect la disciplina "Electronica Digitala".
-Aceasta este prima versiune, fara scriptul de conversie. Acesta urmeaza a fi adaugat in curand!
+Proiect la disciplina "Electronica Digitala" care consta intr-un convertor dintr-o baza in alta. Aceasta este prima versiune, fara scriptul de conversie, care urmeaza a fi adaugat in curand!
