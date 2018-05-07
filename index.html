@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Convertor v1.0</title>
+<title>Convertor v2.0</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
 <script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="script/converter.js" type="text/javascript" language="javascript"></script>
 <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
 </head>
 <body>
@@ -20,33 +21,37 @@
   </header>
   <div class="jumbotron">
   <section class="hero" id="hero">
-    <span class="light"><h1 class="hero_header">Simple Base Convertor</h1></span>
+    <span class="light"><h1 class="hero_header">Simple Base Converter</h1></span>
     <h3><p class="tagline">Enter any number in the textbox below after making your settings...and click Convert!</p></h3>
     
     <p align="center"><i class="fa fa-hand-o-down"></i><i class="fa fa-hand-o-down"></i><i class="fa fa-hand-o-down"></i></p>
     
     <p align="center">
     Please convert my 
-    <select>
+    <select id="from">
     	<option value="Binary" id="bin">Binary</option>
     	<option value="Octal" id="oct">Octal</option>
     	<option value="Decimal" id="dec">Decimal</option>
     	<option value="Hexa" id="hex">Hexadecimal</option>    	
     </select>
     number, to 
-    <select>
-    	<option value="Binary" id="2bin">Binary</option>
-    	<option value="Octal" id="2oct">Octal</option>
-    	<option value="Decimal" id="2dec">Decimal</option>
-    	<option value="Hexa" id="2hex">Hexadecimal</option>    	
+    <select id="to">
+    	<option value="2Binary" id="2bin">Binary</option>
+    	<option value="2Octal" id="2oct">Octal</option>
+    	<option value="2Decimal" id="2dec">Decimal</option>
+    	<option value="2Hexa" id="2hex">Hexadecimal</option>    	
     </select>
    ! Thank you!
 	  <br><br>
 	  <i class="fa fa-hand-o-right"></i>
-	  <input type="text" id="conversion" placeholder="write here">
+	  <input type="text" id="valoare" placeholder="write here">
 	  <br><br>
-	  <button type="button" class="btn btn-success btn-lg">Convert!</button>
+	  <button type="button" class="btn btn-success btn-lg" onClick="converteste()">Convert!</button>
+	  <br><br>
+	  <i class="fa fa-gear fa-spin"></i> <input type="text" id="result" placeholder="Your Result will be here!">
 	  </p>
+	  
+	  
 	  
   </section>
   
