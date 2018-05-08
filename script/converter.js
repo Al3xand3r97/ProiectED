@@ -90,14 +90,18 @@ Hex: 3
 
 
 function converteste() {
+    var valoare = document.getElementById("valoare").value;
     var selectElemFrom = document.getElementById("from");
     var selectElemTo = document.getElementById("to");
     var indexTo = selectElemTo.selectedIndex;
     var indexFrom = selectElemFrom.selectedIndex;
 
+        if ( valoare < 0)
+   alert("Please enter a number higher than 0!");
+
 //APEL BIN TO...
 
-        if ( indexFrom === 0 && indexTo === 1)          
+   else if ( indexFrom === 0 && indexTo === 1)          
    binToOct();
    
    else if ( indexFrom === 0 && indexTo === 2)         
