@@ -45,7 +45,12 @@ function octToHex() {
 function decToBin() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 10).toString(2);
-    $("#result").val(digit);  
+    if ( valoare < 0) {
+        $("#result").val("1" + " " + digit*(-1));  
+    }
+    else {
+        $("#result").val(digit);
+    }
 }
 
 function decToOct() {
@@ -95,11 +100,12 @@ function converteste() {
     var selectElemTo = document.getElementById("to");
     var indexTo = selectElemTo.selectedIndex;
     var indexFrom = selectElemFrom.selectedIndex;
+   
+        if ( indexFrom === 2 && indexTo === 0)              
+   decToBin(); 
 
-        if ( valoare < 0)
+   else if ( valoare < 0)
    alert("Please enter a number higher than 0!");
-
-//APEL BIN TO...
 
    else if ( indexFrom === 0 && indexTo === 1)          
    binToOct();
@@ -110,8 +116,6 @@ function converteste() {
    else if ( indexFrom === 0 && indexTo === 3)          
    binToHex();
 
-//APEL OCT TO...
-
    else if ( indexFrom === 1 && indexTo === 0)
    octToBin();
 
@@ -121,18 +125,11 @@ function converteste() {
    else if ( indexFrom === 1 && indexTo === 3)
    octToHex();
 
-//APEL DEC TO...
-
-   else if ( indexFrom === 2 && indexTo === 0)              
-   decToBin(); 
-
    else if ( indexFrom === 2 && indexTo === 1)
    decToOct();
 
    else if ( indexFrom === 2 && indexTo === 3)
    decToHex();
-
-//APEL HEX TO...
 
    else if ( indexFrom === 3 && indexTo === 0)
    hexToBin();
@@ -144,9 +141,6 @@ function converteste() {
    hexToDec();
 
 //ERROR
-
     else
-
     alert("Error! You really want to convert to the same base?!");
-
 }
