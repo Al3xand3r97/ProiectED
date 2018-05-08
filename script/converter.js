@@ -4,19 +4,20 @@
 function binToOct() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 2).toString(8);
-    console.log(digit);
+    $("#result").val(digit);
+   
 }
 
 function binToDec() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 2);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function binToHex() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 2).toString(16).toUpperCase();
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 // OCTAL TO...
@@ -24,19 +25,19 @@ function binToHex() {
 function octToBin() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 8).toString(2);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function octToDec() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 8).toString(10);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function octToHex() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 8).toString(16).toUpperCase();
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 // DECIMAL TO...
@@ -44,19 +45,19 @@ function octToHex() {
 function decToBin() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 10).toString(2);
-    console.log(digit);  
+    $("#result").val(digit);  
 }
 
 function decToOct() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 10).toString(8);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function decToHex() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 10).toString(16).toUpperCase();
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 // HEX TO...
@@ -64,19 +65,19 @@ function decToHex() {
 function hexToBin() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare,16).toString(2);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function hexToOct() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 16).toString(8);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 function hexToDec() {
     var valoare = document.getElementById("valoare").value;
     var digit = parseInt(valoare, 16).toString(10);
-    console.log(digit);
+    $("#result").val(digit);
 }
 
 /*
@@ -86,6 +87,7 @@ Oct: 1
 Dec: 2
 Hex: 3
 */
+
 
 function converteste() {
     var selectElemFrom = document.getElementById("from");
